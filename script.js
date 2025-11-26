@@ -16,6 +16,7 @@ function showSuccessMessage() {
 	});
 	document.querySelector(".success").style.display = "flex";
 	document.querySelector('main').classList.add('success-state');
+	document.querySelector('#user-email').textContent = emailInput.value;
 }
 
 function showError() {
