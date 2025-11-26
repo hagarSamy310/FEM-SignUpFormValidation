@@ -17,7 +17,7 @@
 	--clr-white: hsl(0, 0%, 100%);
 	--clr-btn-hover: linear-gradient(to right, rgb(227, 41, 97), var(--clr-red));
 	/* Typography and Layout */
-	--row-gap: 1rem;
+	--row-gap: 1.5rem;
 	--font-base: 1rem;
 	--font-family: "Roboto", Arial;
 	--font-regular: 400;
@@ -37,7 +37,7 @@ body {
 
 main {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: var(--clr-white);
 	color: var(--clr-darker-blue);
 	display: grid;
@@ -55,6 +55,9 @@ img {
 .tablet-img,
 .desktop-img {
 	display: none;
+	border-radius: 1rem;
+	grid-area: image;
+	object-position: right;
 }
 
 /* Content */
@@ -88,7 +91,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 0.5rem;
+	gap: 0.3rem;
 }
 
 form > label {
@@ -119,7 +122,7 @@ input:focus {
 input,
 button {
 	border-radius: 8px;
-	padding: 1.2rem;
+	padding: 1rem 1.2rem;
 	font-size: 1rem;
 }
 
@@ -150,14 +153,13 @@ input.error:focus-visible {
 .success {
 	display: none;
 	flex-direction: column;
-	padding: 1.5rem;
 	gap: var(--row-gap);
 }
 
 .success img {
 	width: 60px;
 	height: 60px;
-	margin: 2rem 0;
+	margin: 1rem 0;
 }
 
 .success span {
@@ -169,50 +171,53 @@ input.error:focus-visible {
 }
 
 @media (min-width: 37.5rem) {
-	body {
-		padding: 2rem 0;
-		background-color: var(--clr-darker-blue);
-	}
 	.mobile-img {
 		display: none;
 	}
+
 	.tablet-img {
 		display: block;
-		border-radius: 1rem;
-		grid-area: image;
 	}
+
 	main {
 		border-radius: 1rem;
 		margin: auto;
 		max-width: 800px;
-		min-height: max-content;
-		grid-template-columns: 1fr 1fr;
+		height: fit-content;
+		min-height: auto;
+		grid-template-columns: 2fr 1fr;
 		grid-template-areas: "content image";
-		padding:  1rem;
+		padding: 1rem;
 	}
 	.content {
 		grid-area: content;
 		height: min-content;
 	}
+
 	main.success-state {
 		max-width: 400px;
-		display: grid;
-		grid-template-columns: 1fr;
-		padding: 1rem;
-	}
-	.success {
-		margin: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2rem;
+		min-height: max-content;
 	}
 }
 
 @media (min-width: 64rem) {
+	:root {
+		--row-gap: 1.2rem;
+	}
+	body {
+		padding: 3rem 0;
+		background-color: var(--clr-darker-blue);
+		min-height: 100vh;
+	}
 	.tablet-img {
 		display: none;
 	}
 
 	.desktop-img {
 		display: block;
-		border-radius: 1rem;
-		grid-area: image;
 	}
 }

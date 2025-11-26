@@ -23,12 +23,12 @@ Switching the main card content to a separate success message upon successful fo
 
 ### Screenshot
 
-![](./assets/images/screenshot.png)
+![](./assets/images/screen.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/a-responsive-sign-up-form-using-css-and-js-for-validation-fSwsQqkDA1)
+- Live Site URL: (https://signupform31.netlify.app/)
 
 ### Built with
 

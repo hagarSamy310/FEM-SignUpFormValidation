@@ -27,3 +27,14 @@ function showError() {
 		document.getElementById("error-msg").style.opacity = "0";
 	});
 }
+
+function backToMainPage () {
+	const pageComponents = document.querySelectorAll(".image-wrapper, .content");
+	pageComponents.forEach((component) => {
+		component.style.display = "block";
+	});
+	document.querySelector(".success").style.display = "none";
+	document.querySelector('main').classList.remove('success-state')
+}
+
+document.getElementById('dismiss-btn').addEventListener('click', backToMainPage);

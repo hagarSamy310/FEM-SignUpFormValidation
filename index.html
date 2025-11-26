@@ -30,19 +30,16 @@
 					class="mobile-img"
 					src="./assets/images/illustration-sign-up-mobile.svg"
 					alt=""
-					aria-disabled="true"
 				/>
 				<img
 					class="tablet-img"
 					src="./assets/images/illustration-sign-up-tablet.svg"
 					alt=""
-					aria-disabled="true"
 				/>
 				<img
 					class="desktop-img"
 					src="./assets/images/illustration-sign-up-desktop.svg"
 					alt=""
-					aria-disabled="true"
 				/>
 			</div>
 			<div class="content">
@@ -56,7 +53,7 @@
 				<form id="form" novalidate>
 					<label for="email"
 						>Email address
-						<span id="error-msg">Valid email required</span></label
+						<span id="error-msg" role="alert">Valid email required</span></label
 					>
 					<input
 						type="email"
@@ -64,7 +61,7 @@
 						id="email"
 						placeholder="email@company.com"
 					/>
-					<button id="subscription-btn">Subscribe to monthly newsletter</button>
+					<button type="submit" id="subscription-btn">Subscribe to monthly newsletter</button>
 				</form>
 			</div>
 			<div class="success">
@@ -72,7 +69,6 @@
 					class="success-img"
 					src="./assets/images/icon-success.svg"
 					alt=""
-					aria-disabled="true"
 				/>
 				<h2>Thanks for subscribing!</h2>
 				<p>
@@ -80,7 +76,7 @@
 					<span>ash@loremcompany.com</span>. Please open it and click the button
 					inside to confirm your subscription.
 				</p>
-				<button>Dismiss message</button>
+				<button id="dismiss-btn" type="button">Dismiss message</button>
 			</div>
 		</main>
 	</body>
